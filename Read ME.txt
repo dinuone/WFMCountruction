@@ -1,0 +1,9 @@
+Admin 
+---------
+username - dinuwan
+password - dtm1122
+
+Manager
+---------
+username - tharindu
+password - th123

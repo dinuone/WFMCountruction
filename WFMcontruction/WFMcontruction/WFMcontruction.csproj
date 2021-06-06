@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F85CB10B-59F0-4A61-B9AE-D968AC77D76A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WFMcontruction</RootNamespace>
+    <AssemblyName>WFMcontruction</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.2.0.0\lib\net35-Client\CircularProgressBar.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.3.0.0\lib\net35-Client\WinFormAnimation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddProject.cs" />
+    <Compile Include="AddUsers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddUsers.Designer.cs">
+      <DependentUpon>AddUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admindash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admindash.Designer.cs">
+      <DependentUpon>admindash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="connection.cs" />
+    <Compile Include="crud.cs" />
+    <Compile Include="EmpLeave.cs" />
+    <Compile Include="EmpLeave_Manager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmpLeave_Manager.Designer.cs">
+      <DependentUpon>EmpLeave_Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageUsrAcc.cs" />
+    <Compile Include="mangerDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mangerDashboard.Designer.cs">
+      <DependentUpon>mangerDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports.cs" />
+    <Compile Include="splashScreencs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="splashScreencs.Designer.cs">
+      <DependentUpon>splashScreencs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercntrlAddemp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercntrlAddemp.Designer.cs">
+      <DependentUpon>usercntrlAddemp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercntrlManageEMP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercntrlManageEMP.Designer.cs">
+      <DependentUpon>usercntrlManageEMP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userlogin.cs" />
+    <Compile Include="usrAddLeaves.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usrAddLeaves.Designer.cs">
+      <DependentUpon>usrAddLeaves.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usrIncome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usrIncome.Designer.cs">
+      <DependentUpon>usrIncome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usrManageProject.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usrManageProject.Designer.cs">
+      <DependentUpon>usrManageProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usrReports.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usrReports.Designer.cs">
+      <DependentUpon>usrReports.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddUsers.resx">
+      <DependentUpon>AddUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admindash.resx">
+      <DependentUpon>admindash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpLeave_Manager.resx">
+      <DependentUpon>EmpLeave_Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mangerDashboard.resx">
+      <DependentUpon>mangerDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="splashScreencs.resx">
+      <DependentUpon>splashScreencs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercntrlAddemp.resx">
+      <DependentUpon>usercntrlAddemp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercntrlManageEMP.resx">
+      <DependentUpon>usercntrlManageEMP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usrAddLeaves.resx">
+      <DependentUpon>usrAddLeaves.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usrIncome.resx">
+      <DependentUpon>usrIncome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usrManageProject.resx">
+      <DependentUpon>usrManageProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usrReports.resx">
+      <DependentUpon>usrReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Conact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diagram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-bag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart-diagram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-150.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-eye-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-eye-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6cce81b78f1d194ae459d34dfa98ce59.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo wfm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo wfm1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wfm 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wfm 21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-window-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\on going prj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\complete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new prj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\total.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-new-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-refresh-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-checkmark-240.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-hide-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-hide-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-user-male-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-folder-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-date-to-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-group-of-projects-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-money-bag-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-normal-distribution-histogram-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-export-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
